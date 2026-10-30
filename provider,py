@@ -1,0 +1,16 @@
+import os
+
+def call_api(prompt, options, context):
+    topic = context.get('vars', {}).get('topic', 'unknown')
+    
+    # Custom provider logic / stub response wrapper
+    response_text = f"Stub response for prompt: {prompt}"
+    
+    return {
+        "output": response_text,
+        "tokenUsage": {
+            "total": 25,
+            "prompt": 10,
+            "completion": 15
+        }
+    }
