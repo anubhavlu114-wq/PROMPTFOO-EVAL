@@ -1,1 +1,15 @@
+description: "LLM Tweet Generation Evaluation Benchmark"
 
+prompts:
+  - "Write a tweet about {{topic}}"
+  - "Write a concise, funny tweet about {{topic}}"
+
+providers:
+  - id: "python:provider.py"
+    label: "Custom Python Provider"
+
+tests:
+  - vars:
+      topic: "bananas"
+  - vars:
+      topic: "avocado toast"
